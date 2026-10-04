@@ -1,0 +1,15 @@
+:root{--fg:#eef3f7}
+body.lt{--fg:#0b1822}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;overflow:hidden;background:#03060a;color:var(--fg);font:300 14px Manrope,sans-serif;touch-action:none;-webkit-user-select:none;user-select:none}
+canvas{position:fixed;inset:0;width:100%;height:100%}
+#hint{position:fixed;left:0;right:0;top:48%;text-align:center;font:italic 400 1.5rem "Cormorant Garamond",Georgia,serif;letter-spacing:.2em;opacity:.65;pointer-events:none;transition:opacity 2s;animation:br 4s ease-in-out infinite}
+@keyframes br{50%{opacity:.2}}
+#ui{position:fixed;top:calc(14px + env(safe-area-inset-top));right:14px;display:flex;gap:8px}
+button{font:inherit;font-size:12px;color:var(--fg);background:rgba(127,160,190,.14);border:1px solid rgba(160,200,230,.35);border-radius:50% 46% 54% 48%/52% 50% 48% 52%;padding:9px 15px;backdrop-filter:blur(10px);cursor:pointer;transition:border-radius .8s,background .4s}
+button:hover,button:focus-visible{border-radius:46% 54% 48% 52%/50% 46% 54% 50%;background:rgba(160,210,255,.28);outline:none}
+#sh{position:fixed;inset:0;display:none;place-items:center;background:rgba(3,8,14,.55);backdrop-filter:blur(14px)}
+#sh.on{display:grid}
+#sh>div,#shL{display:flex;flex-direction:column;gap:10px;min-width:min(78vw,260px)}
+#sh a,#sh button{text-align:center;text-decoration:none;color:#eef3f7;border:1px solid rgba(160,200,230,.4);background:rgba(127,160,190,.16);padding:12px;border-radius:40px 28px 40px 30px/30px 40px 28px 40px}
+#sh small{opacity:.7;text-align:center;font-size:11px;color:#eef3f7}
